@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .calculator {
+      width: 400px;
+      height: 500px;
+      margin: 0 auto;
+      border: 1px solid black;
+      padding: 20px;
+      text-align: center;
+    }
+    .display {
+      height: 50px;
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .buttons button {
+      width: 75px;
+      height: 60px;
+      font-size: 24px;
+      margin: 10px;
+      border: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+  <div class="calculator">
+    <div class="display">
+      <input type="text" id="display" disabled />
+    </div>
+    <div class="buttons">
+      <button id="7">7</button>
+      <button id="8">8</button>
+      <button id="9">9</button>
+      <button id="divide">/</button>
+      <button id="4">4</button>
+      <button id="5">5</button>
+      <button id="6">6</button>
+      <button id="multiply">*</button>
+      <button id="1">1</button>
+      <button id="2">2</button>
+      <button id="3">3</button>
+      <button id="add">+</button>
+      <button id="clear">C</button>
+      <button id="0">0</button>
+      <button id="decimal">.</button>
+      <button id="equals">=</button>
+      <button id="subtract">-</button>
+    </div>
+  </div>
+  <script>
+    const buttons = document.querySelectorAll(".buttons button");
+    const display = document.querySelector("#display");
+    let firstValue = "";
+    let operator = "";
+    let secondValue = "";
+
+    buttons.forEach((button) => {
+      button.addEventListener("click", (event) => {
+        const value = event.target.innerText;
+
+        if (value === "C") {
+          firstValue = "";
+          operator = "";
+          secondValue = "";
+          display.value = "";
+        } else if (value === "+" || value === "-" || value === "*" || value === "/") {
+          operator = value;
+          firstValue = display.value;
+          display.value = "";
+        } else if (value === "=") {
+          secondValue = display.value;
+          display.value = eval(`${firstValue} ${operator} ${secondValue}`);
+        } else {
+          display.value += value;
+        }
+      });
+    });
+  </script>
+</body>
+</html>
