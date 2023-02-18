@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Peta:wght@300;500;700&family=Press+Start+2P&family=Unica+One&display=swap');
+
 html {
     margin: auto;
     max-width: 1500px;
+    min-width: 565px;
     background-color: #f2f2f2;
     height: 100%;
 }
@@ -49,26 +52,29 @@ header {
 
 #logo-div {
     margin: 0 auto;
-    max-width: 50%;
+    max-width: 700px;
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 1fr 1fr;
 }
 
 #logo {
-    height: auto;
+    /*height: auto;*/
     grid-column: 1;
-    grid-row: 1/2;
+    grid-row: 1/3;
 }
 
 #chibox {
-    font-family: ethnocentric, sans-serif;
+    /*font-family: ethnocentric, sans-serif;*/
+    /*font-family: 'Lexend Peta', sans-serif;*/
+    font-family: 'Press Start 2P', cursive;
     font-style: normal;
     font-weight: 500;
-    font-size: 6em;
+    font-size: 5.4em;
     text-align: center;
-    margin-top: -0.2em;
+    padding-left: 10px;
+    margin-top: 0em;
     grid-column: 2;
-    grid-row: 1/2;
+    grid-row: 1;
     -webkit-user-select: none;
     /* Safari */
     -moz-user-select: none;
@@ -80,14 +86,17 @@ header {
 }
 
 #artepub {
-    font-family: 'Fjord One', serif;
+    /*font-family: 'Fjord One', serif;*/
+    font-family: 'Lexend Peta', sans-serif;
+    /*font-family: 'Unica One', cursive;*/
+    letter-spacing: -0.13em;
     font-style: normal;
     font-weight: 300;
-    font-size: 3.15em;
+    font-size: 2.5em;
     text-align: center;
     margin-top: -1.3em;
     grid-column: 2;
-    grid-row: 2/3;
+    grid-row: 2;
     -webkit-user-select: none;
     /* Safari */
     -moz-user-select: none;
@@ -171,24 +180,66 @@ main {
 #grid-home {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 40px;
+    grid-gap: 20px;
     margin-top: 2rem;
     margin-bottom: 3em;
-}
-
-#grid-home img {
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
-    border-radius: 10px;
 }
 
 .ser-img {    
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
     border-radius: 10px;
     margin-bottom: 3em;
+    max-width: 100%;
 }
 
 #content-box1 {
     text-align: center;
+}
+
+#content-box2 {
+    grid-row: 1;
+    grid-column: 2;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 400px;
+}
+
+#content-box3 {
+    grid-row: 1;
+    grid-column: 3;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 400px;
+}
+
+#content-box4 {
+    grid-row: 1;
+    grid-column: 4;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 400px;
+}
+
+#content-box2 img, #content-box3 img, #content-box4 img {
+    display: block;
+    width: 100%;
+    border-radius: 0;
+}
+
+.content-box-description {
+    padding: 10px;
+    padding-bottom: 0px;
+    text-align: center;
+    font-size: 1.5em;
 }
 
 #see-more a {
@@ -306,7 +357,7 @@ footer {
     margin-bottom: 3em;
 }
 
-#content-ropa1,
+/*#content-ropa1,
 #content-acce1 {
     grid-column: 1 / 2;
 }
@@ -324,9 +375,139 @@ footer {
 #content-ropa4,
 #content-acce4 {
     grid-column: 4 / 5;
-}
+}*/
 
 #grid-products img {
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
     border-radius: 10px;
+    max-width: 400px;
+}
+
+.product-description {
+    font-size: 1.3em;
+}
+
+@media (max-width: 1455px) {
+
+    #logo-div {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    #logo {
+        max-width: 120px;
+    }
+    
+    #chibox {
+        font-size: 3.8em;
+    }
+
+    #artepub {        
+        font-size: 1.7em;
+        margin-top: -1.5em;
+    }
+
+    #grid-home {
+        grid-template-columns: 1fr 1fr;
+        max-width: 100%;
+        margin: 0 15% 3em 15%;
+    }
+
+    #content-box1 {
+        grid-row: 1;
+        grid-column: 1;
+        padding-top: 25%;
+        padding-bottom: 25%;
+        max-width: 400px;
+    }
+
+    #content-box2 {
+        grid-row: 1;
+        grid-column: 2;
+        max-width: 400px;
+    }
+
+    #content-box3 {
+        grid-row: 2;
+        grid-column: 1;
+        max-width: 400px;
+    }
+
+    #content-box4 {
+        grid-row: 2;
+        grid-column: 2;
+        max-width: 400px;
+    }
+
+    #content-box2 img, #content-box3 img, #content-box4 img {
+        display: block;
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .content-box-description {
+        padding: 10px;
+        padding-bottom: 0px;
+        text-align: center;
+        font-size: 1.5em;
+    }
+
+    .garantia-div {
+        max-width: 100%;
+    }
+
+    #grid-products {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 840px;
+        min-width: 50%;
+        margin: 0 auto;
+    }
+
+    #content-ropa1, #content-acce1, #content-taza1 {
+        text-align: center;
+        margin: 25% 0 25% 0;
+        max-width: 400px;
+    }
+
+}
+
+@media (max-width: 900px){
+
+    #grid-products {
+        grid-template-columns: repeat(1, 1fr);
+        margin: 0 auto;
+    }
+
+    #grid-products img {
+        max-width: 100%;
+    }
+
+    #content-ropa1, #content-acce1, #content-taza1 {
+        text-align: center;
+        max-width: 100%;
+        margin: 0;
+        margin-top: 2.5em;
+    }
+
+    .product-description {
+        margin-bottom: -20px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    #grid-home {
+        grid-template-columns: 1fr 1fr;
+        max-width: 100%;
+        margin: 0 0% 3em 0%;
+    }
+
+    .footext {
+        max-width: 75%;
+        margin: 0 auto;
+        padding: 0;
+        padding-top: 1.5em;
+    }
+
 }
