@@ -3,7 +3,7 @@
 html {
     margin: auto;
     max-width: 1500px;
-    min-width: 565px;
+    min-width: 390px;
     background-color: #f2f2f2;
     height: 100%;
 }
@@ -497,6 +497,24 @@ footer {
 
 @media (max-width: 600px) {
 
+    #logo-div {
+        max-width: 390px;
+        margin: 0 auto;
+    }
+
+    #logo {
+        max-width: 100px;
+    }
+    
+    #chibox {
+        font-size: 2.5em;
+        margin-top: 0.3em;
+    }
+
+    #artepub {
+        font-size: 1.2em;
+    }
+
     #grid-home {
         grid-template-columns: 1fr 1fr;
         max-width: 100%;
@@ -508,6 +526,10 @@ footer {
         margin: 0 auto;
         padding: 0;
         padding-top: 1.5em;
+    }
+
+    #navigation li a {
+        padding: 14px 5px;
     }
 
 }
